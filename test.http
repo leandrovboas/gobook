@@ -1,0 +1,40 @@
+### Listar todos os livros
+GET http://localhost:8080/books
+Accept: application/json
+
+
+### Adicionar um novo livro
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "title": "Clean Code 03",
+  "author": "Robert C. Martin",
+  "genre": "Software Engineering"
+}
+
+### Listar 1 livro especifico
+GET http://localhost:8080/books/1
+Accept: application/json
+
+### Atualizar um livro existente
+GET http://localhost:8080/books/2
+Content-Type: application/json
+
+{
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "genre": "Software Development"
+}
+
+### Deletar um livro
+DELETE http://localhost:8080/books/1
+
+### Procura um livro pelo nome
+GET http://localhost:8080/books/search/Clean Code
+Accept: application/json
+
+### Simulacao de leitura de um livro
+GET http://localhost:8080/books/SimulateReading/path?ids%5B%5D=1&ids%5B%5D=2&ids%5B%5D=10
+Accept: application/json
+
